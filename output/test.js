@@ -41,5 +41,57 @@ class TwoSumTest {
     }
     ;
 }
-let test2 = new TwoSumTest([2, 7, 11, 15], 9);
-console.log(test2.TwoSumTest());
+// let test2: TwoSumTest = new TwoSumTest([2, 7, 11, 15], 9);
+// console.log(test2.TwoSumTest());
+class LengthOfLongestSubstringTest {
+    constructor(...args) {
+        this.str = args[0];
+    }
+    LengthOfLongestSubstringTest() {
+        return LCode_1.LCode.lengthOfLongestSubstring(this.str);
+    }
+}
+// let test3: LengthOfLongestSubstringTest = new LengthOfLongestSubstringTest("dvdf");
+// test3.LengthOfLongestSubstringTest();
+class LongestPalindromeTest {
+    constructor(...args) {
+        this.str = args[0];
+    }
+    LongestPalindromeTest() {
+        return LCode_1.LCode.longestPalindrome(this.str);
+    }
+}
+// let test4 = new LongestPalindromeTest("abababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababa");
+// test4.LongestPalindromeTest();
+class ReverseTest {
+    constructor(...args) {
+        this.str = args[0];
+    }
+    Reverse() {
+        let a = LCode_1.LCode.reverse(this.str);
+        return;
+    }
+}
+// let test5 = new ReverseTest(-123);
+// test5.Reverse();
+class TestBase {
+    constructor(...args) {
+        this.arg = args;
+    }
+    Test() {
+    }
+}
+class longestCommonPrefixTest extends TestBase {
+    Test() {
+        return LCode_1.LCode.longestCommonPrefix(this.arg[0]);
+    }
+}
+// let test6 = new longestCommonPrefixTest(["flower", "flow", "flight"]);
+// test6.Test();
+class convertTest extends TestBase {
+    Test() {
+        return LCode_1.LCode.convert(this.arg[0], this.arg[1]);
+    }
+}
+let test7 = new convertTest("PAYPALISHIRING", 3);
+test7.Test();
