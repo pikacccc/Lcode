@@ -247,5 +247,37 @@ class LCode {
         return res > 2147483647 ? 2147483647 : res < -2147483648 ? -2147483648 : res;
     }
     ;
+    static intToRoman(num) {
+        let str = num.toString();
+        if (str == "")
+            return "";
+        let map = new Map([["1", "I"], ["4", "IV"], ["5", "V"], ["9", "IX"], ["10", "X"], ["40", "XL"], ["50", "L"], ["90", "XC"], ["100", "C"], ["400", "CD"], ["500", "D"], ["900", "CM"], ["1000", "M"]]);
+        let res = "";
+        let curCount = str.length - 1;
+        for (let item of str) {
+            let onum = parseInt(item);
+            let num = onum * Math.pow(10, curCount);
+            if (map.has(num.toString())) {
+                res += map.get(num.toString());
+            }
+            else {
+                if (onum > 5) {
+                    res += map.get((5 * Math.pow(10, curCount)).toString());
+                    onum -= 5;
+                }
+                if (map.has((onum * Math.pow(10, curCount)).toString())) {
+                    res += map.get((onum * Math.pow(10, curCount)).toString());
+                }
+                else {
+                    for (let i = 0; i < onum; ++i) {
+                        res += map.get(Math.pow(10, curCount).toString());
+                    }
+                }
+            }
+            curCount--;
+        }
+        return res;
+    }
+    ;
 }
 exports.LCode = LCode;
