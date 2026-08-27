@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const _10________1 = require("./10.\u6B63\u5219\u8868\u8FBE\u5F0F\u5339\u914D");
 const LCode_1 = require("./LCode");
 const Util_1 = require("./Util");
 class TwoNumAddTest {
@@ -93,5 +94,12 @@ class convertTest extends TestBase {
         return LCode_1.LCode.convert(this.arg[0], this.arg[1]);
     }
 }
-let test7 = new convertTest("PAYPALISHIRING", 3);
-test7.Test();
+// let test7 = new convertTest("PAYPALISHIRING", 3);
+// test7.Test();
+class Test extends TestBase {
+    Test() {
+        return (0, _10________1.isMatch)(`aa`, `a*a`);
+    }
+}
+let test = new Test();
+test.Test();
