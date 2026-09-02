@@ -6,6 +6,7 @@ import { divide } from "./29.两数相除";
 import { addBinary } from "./67.二进制求和";
 import { climbStairs } from "./70.爬楼梯";
 import { deleteDuplicates } from "./83.删除排序链表中的重复元素";
+import { reverseBetween } from "./92.反转链表-ii";
 import { ListNode } from "./DataDefine";
 import { LCode } from "./LCode";
 import { Util } from "./Util";
@@ -144,11 +145,16 @@ class convertTest extends TestBase {
 class Test extends TestBase {
     Test() {
         let head = new ListNode(1, null);
-        let node1 = new ListNode(1, null);
-        let node2 = new ListNode(2, null);
+        let node1 = new ListNode(2, null);
+        let node2 = new ListNode(3, null);
+        let node3 = new ListNode(4, null);
+        let node4 = new ListNode(5, null);
         head.next = node1;
         node1.next = node2;
-        deleteDuplicates(head);
+        node2.next = node3;
+        node3.next = node4;
+
+        reverseBetween(head, 2, 4);
     }
 }
 let test = new Test();
