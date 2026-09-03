@@ -34,6 +34,7 @@ function minDepth(root: TreeNode | null): number {
         minHeight(node.right, deep + 1);
     }
 
+    minHeight(root,1);
     return min;
 };
 // @lc code=end
